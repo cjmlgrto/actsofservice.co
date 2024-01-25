@@ -2,7 +2,7 @@
 /* --------------------------------- */
 
 :root {
-    --color--background: #FFFFFF;
+    --color--background: #f5f5f5;
     --color--foreground: #3A3A42;
 }
 
@@ -37,15 +37,31 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 img {
-    height: 60vh;
+    height: 50vh;
+    margin-bottom: 10vh;
     margin-top: -10vh;
+}
+
+p {
+    max-width: 500px;
+}
+
+em {
+    font-style: normal;
+    border-bottom: 2px solid #b8b8b8;
+}
+
+.alt {
+    margin-top: 1rem;
+    color: #959595;
 }
