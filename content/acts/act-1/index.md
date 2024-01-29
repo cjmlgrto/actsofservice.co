@@ -4,7 +4,6 @@ title: The Bear
 date: 2023-11-18
 summary: The Bear inspired us to start our supper club, and we crafted a menu that paid homage to the dishes from the show.
 color: 102B8E
-price: $30
 courses:
     - name: Starter
       title: “The Michael”

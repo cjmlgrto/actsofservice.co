@@ -4,7 +4,6 @@ title: Indo + Filo Fusion
 date: 2024-01-13
 summary: We wanted to craft a menu that honoured our cultural backgrounds, and the mix that represented us both.
 color: A11300
-price: $50
 courses:
     - name: Entree
       title: Krupuk
