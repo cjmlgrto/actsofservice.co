@@ -1,4 +1,21 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    <div>{{ .Content }}</div>
+<div class="logo">
+    {{ partial "logo" . }}
+</div>
+<div class="summary">
+    <p>{{ .Content }}</p>
+</div>
+<ul class="list">
+    {{ range (where .Site.RegularPages.ByDate ".Type" "acts") }}
+    <li>
+        <a href="{{ .Permalink }}">
+            <div class="leading">{{ .Params.Act }}</div>
+            <div class="content">
+                <div class="title">{{ .Title }}</div>
+                <time class="subtitle" datetime='{{ .Date.Format "2006-01-02T15:04:05-0700" }}"'>{{ .Date.Format "Jan 2006" }}</time>
+            </div>
+        </a>
+    </li>
+    {{ end }}
+</ul>
 {{ end }}
