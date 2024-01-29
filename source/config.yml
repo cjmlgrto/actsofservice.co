@@ -1,0 +1,10 @@
+# ------------------------------------------------------------
+# Site Configuration
+# ------------------------------------------------------------
+
+title: Acts of Service
+baseUrl: http://actsofservice.co
+
+params:
+  author: Carlos Melegrito and Amanda Kusuma
+  description: A supper club based in Brunswick East, aiming to connect good people over good food.
