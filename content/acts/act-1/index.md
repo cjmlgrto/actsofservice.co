@@ -21,4 +21,5 @@ media:
     - 04.gif
     - 05.jpg
     - 06.gif
+    - 07.jpg
 ---
