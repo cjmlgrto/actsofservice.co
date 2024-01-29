@@ -2,13 +2,13 @@
 <div class="logo">
     {{ partial "logo" . }}
 </div>
-<div class="summary">
+<div class="summary" id="about-acts">
     <p>{{ .Content }}</p>
 </div>
-<ul class="list">
+<ul class="list" id="acts">
     {{ range (where .Site.RegularPages.ByDate ".Type" "acts") }}
     <li>
-        <a href="{{ .Permalink }}">
+        <a href="{{ .Permalink }}" class='{{ if eq .Params.Layout "invite" }}waitlist{{ end }}'>
             <div class="leading">{{ .Params.Act }}</div>
             <div class="content">
                 <div class="title">{{ .Title }}</div>

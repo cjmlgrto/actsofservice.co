@@ -1,8 +1,13 @@
 {{ define "main" }}
+<style>
+    :root {
+        --color--text-accent: #{{ .Params.Color }};
+    }
+</style>
 <div class="wordmark">
-    {{ partial "wordmark" . }}
+    <a href="/">{{ partial "wordmark" . }}</a>
 </div>
-<div class="info">
+<div class="header">
     <div class="leading">{{ .Params.Act }}</div>
     <div class="content">
         <div class="title">{{ .Title }}</div>
@@ -19,14 +24,15 @@
         <div class="leading">{{ .name }}</div>
         <div class="content">
             <div class="title">{{ .title }}</div>
-            <div class="subtitle">{{ .subtitle }}</div>
+            <div class="subtitle">{{ .description }}</div>
         </div>
     </li>
     {{ end }}
+    <li class="bookend">
+        <div class="leading">{{ len .Params.Courses }} courses</div>
+        <div class="content">{{ .Params.Price }} per person</div>
+    </li>
 </ul>
-<div class="bookend">
-    <div class="leading">{{ len .Params.Courses }} courses</div>
-    <div class="trailing">{{ .Params.Price }} per person</div>
-</div>
+
 {{ end }}
 {{ end }}

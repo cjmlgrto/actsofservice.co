@@ -1,8 +1,13 @@
 {{ define "main" }}
+<style>
+    :root {
+        --color--text-accent: #{{ .Params.Color }};
+    }
+</style>
 <div class="wordmark">
-    {{ partial "wordmark" . }}
+    <a href="/">{{ partial "wordmark" . }}</a>
 </div>
-<div class="info">
+<div class="header">
     <div class="leading">{{ .Params.Act }}</div>
     <div class="content">
         <div class="title">{{ .Title }}</div>
