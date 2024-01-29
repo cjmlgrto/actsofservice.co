@@ -7,6 +7,13 @@
 <div class="wordmark">
     <a href="/">{{ partial "wordmark" . }}</a>
 </div>
+{{ if .Params.Media }}
+<figure>
+    {{ range .Params.Media }}
+    <img src="{{ . }}"/>
+    {{ end }}
+</figure>
+{{ end }}
 <div class="header">
     <div class="leading">{{ .Params.Act }}</div>
     <div class="content">

@@ -14,4 +14,11 @@ courses:
     - name: Dessert
       title: Marcus’ Chocolate Cake
       description: Chocolate cake, mousse and icing with vanilla ice cream
+media:
+    - 01.jpg
+    - 02.jpg
+    - 03.jpg
+    - 04.gif
+    - 05.jpg
+    - 06.gif
 ---
