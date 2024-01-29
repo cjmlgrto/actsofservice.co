@@ -17,42 +17,42 @@
 <div class="summary">
     <p>{{ .Params.Summary }}</p>
 </div>
-<form class="list">
+<form class="list" name="invite" netlify>
     <fieldset>
         <div class="leading">Q1</div>
         <div class="content">
-            <div class="title"><label for="name">What's your name?</label></div>
+            <div class="title">What's your name?</div>
             <div class="subtitle"><input type="text" name="name" placeholder="Write your answer..."/></div>
         </div>
     </fieldset>
     <fieldset>
         <div class="leading">Q2</div>
         <div class="content">
-            <div class="title"><label for="email">And your email address?</label></div>
+            <div class="title">And your email address?</div>
             <div class="subtitle"><input type="email" name="email" placeholder="e.g. example@email.com"/></div>
         </div>
     </fieldset>
     <fieldset>
         <div class="leading">Q3</div>
         <div class="content">
-            <div class="title"><label for="socials">What's your social media handle?</label></div>
+            <div class="title">What's your social media handle?</div>
             <div class="subtitle"><input type="text" name="socials" placeholder="e.g. Instagram, Twitter (X), Threads..."/></div>
         </div>
     </fieldset>
     <fieldset>
         <div class="leading">Q4</div>
         <div class="content">
-            <div class="title"><label for="pronouns">What pronouns do you go by?</label></div>
+            <div class="title">What pronouns do you go by?</div>
             <div class="subtitle"><input type="text" name="pronouns" placeholder="e.g. They/Them, She/Her, He/Him, etc..."/></div>
         </div>
     </fieldset>
     <fieldset>
         <div class="leading">Q5</div>
         <div class="content">
-            <div class="title"><label for="dietary">Any dietary requirements?</label></div>
-            <div class="subtitle"><input type="text" name="dietary" placeholder="e.g. Vegan/Vegetarian, spice tolerance, allergies..."/></div>
+            <div class="title">Any dietary requirements?</div>
+            <div class="subtitle"><input type="text" name="dietary" placeholder="e.g. Vego, spice tolerance, allergies..."/></div>
         </div>
     </fieldset>
-    <input type="submit" value="Request Invite"/>
+    <button type="submit">Request Invite</button>
 </form>
 {{ end }}
