@@ -8,9 +8,11 @@
     <a href="/">{{ partial "wordmark" . }}</a>
 </div>
 {{ if .Params.Media }}
-<figure>
+<figure class="collage">
     {{ range .Params.Media }}
-    <img src="{{ . }}"/>
+    <div class="image">
+        <img src="{{ . }}" loading="lazy"/>
+    </div>
     {{ end }}
 </figure>
 {{ end }}
