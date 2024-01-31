@@ -20,4 +20,11 @@ courses:
     - name: Treats
       title: Indo and Filo Snacks
       description: Choc-Nut, and Momogi
+media:
+  - 01.jpg
+  - 02.jpg
+  - 03.jpg
+  - 04.jpg
+  - 05.jpg
+  - 06.jpg
 ---
