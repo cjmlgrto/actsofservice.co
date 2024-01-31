@@ -7,52 +7,54 @@
 <div class="wordmark">
     <a href="/">{{ partial "wordmark" . }}</a>
 </div>
-<div class="header">
-    <div class="leading">{{ .Params.Act }}</div>
-    <div class="content">
-        <div class="title">{{ .Title }}</div>
-        <time class="subtitle" datetime='{{ .Date.Format "2006-01-02T15:04:05-0700" }}"'>{{ .Date.Format "Jan 2006" }}</time>
+<div class="single">
+    <div class="header">
+        <div class="content">
+            <div class="subtitle">{{ .Params.Act }}</div>
+            <div class="title">{{ .Title }}</div>
+        </div>
+        <time class="trailing" datetime='{{ .Date.Format "2006-01-02T15:04:05-0700" }}"'>{{ .Date.Format "Jan 2006" }}</time>
     </div>
+    <div class="summary">
+        <p>{{ .Params.Summary }}</p>
+    </div>
+    <form class="list" name="invite" netlify>
+        <fieldset>
+            <div class="leading">Q1</div>
+            <div class="content">
+                <div class="title">What's your name?</div>
+                <div class="subtitle"><input type="text" name="name" placeholder="Write your answer..."/></div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="leading">Q2</div>
+            <div class="content">
+                <div class="title">And your email address?</div>
+                <div class="subtitle"><input type="email" name="email" placeholder="e.g. example@email.com"/></div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="leading">Q3</div>
+            <div class="content">
+                <div class="title">What's your social media handle?</div>
+                <div class="subtitle"><textarea name="socials" placeholder="e.g. Instagram, Twitter (X), Threads..."></textarea></div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="leading">Q4</div>
+            <div class="content">
+                <div class="title">What pronouns do you go by?</div>
+                <div class="subtitle"><textarea name="pronouns" placeholder="e.g. They/Them, She/Her, He/Him, etc..."></textarea></div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="leading">Q5</div>
+            <div class="content">
+                <div class="title">Any dietary requirements?</div>
+                <div class="subtitle"><textarea name="dietary" placeholder="e.g. Vego, spice tolerance, allergies..."></textarea></div>
+            </div>
+        </fieldset>
+        <button type="submit">Request Invite</button>
+    </form>
 </div>
-<div class="summary">
-    <p>{{ .Params.Summary }}</p>
-</div>
-<form class="list" name="invite" netlify>
-    <fieldset>
-        <div class="leading">Q1</div>
-        <div class="content">
-            <div class="title">What's your name?</div>
-            <div class="subtitle"><input type="text" name="name" placeholder="Write your answer..."/></div>
-        </div>
-    </fieldset>
-    <fieldset>
-        <div class="leading">Q2</div>
-        <div class="content">
-            <div class="title">And your email address?</div>
-            <div class="subtitle"><input type="email" name="email" placeholder="e.g. example@email.com"/></div>
-        </div>
-    </fieldset>
-    <fieldset>
-        <div class="leading">Q3</div>
-        <div class="content">
-            <div class="title">What's your social media handle?</div>
-            <div class="subtitle"><textarea name="socials" placeholder="e.g. Instagram, Twitter (X), Threads..."></textarea></div>
-        </div>
-    </fieldset>
-    <fieldset>
-        <div class="leading">Q4</div>
-        <div class="content">
-            <div class="title">What pronouns do you go by?</div>
-            <div class="subtitle"><textarea name="pronouns" placeholder="e.g. They/Them, She/Her, He/Him, etc..."></textarea></div>
-        </div>
-    </fieldset>
-    <fieldset>
-        <div class="leading">Q5</div>
-        <div class="content">
-            <div class="title">Any dietary requirements?</div>
-            <div class="subtitle"><textarea name="dietary" placeholder="e.g. Vego, spice tolerance, allergies..."></textarea></div>
-        </div>
-    </fieldset>
-    <button type="submit">Request Invite</button>
-</form>
 {{ end }}

@@ -86,12 +86,15 @@ button {
 /* --------------------------------- */
 
 body {
-    max-width: 560px;
     padding: 24px 16px;
+}
+
+.single, .double {
+    max-width: 560px;
     margin: 0 auto;
 }
 
-main > * {
+main > *, .single > *, .column > * {
     margin-bottom: 48px;
 }
 
@@ -104,6 +107,22 @@ main > * {
     .summary {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .double {
+        display: flex;
+        max-width: calc((560px * 2) + 128px);
+    }
+
+    .double .column:first-child {
+        margin-right: 128px;
+    }
+
+    .double {
+        margin-top: 96px;
+        margin-bottom: 96px;
     }
 }
 
@@ -160,14 +179,14 @@ main > * {
     color: var(--color--text-secondary);
 }
 
-.header .leading {
+.header .trailing {
     width: calc(50% - 16px);
-    margin-right: 16px;
+    margin-left: 16px;
+    text-align: right;
 }
 
 .header .content {
     width: 50%;
-    text-align: right;
 }
 
 .header .content .title {
@@ -209,6 +228,9 @@ footer small {
     position: relative;
     padding-top: 40%;
     width: 33%;
+
+    animation-name: dissolve;
+    animation-timing-function: ease-in-out;
 }
 
 .collage img {
@@ -219,9 +241,6 @@ footer small {
     width: 100%;
     margin-bottom: 0;
     position: absolute;
-
-    animation-name: dissolve;
-    animation-timing-function: ease-in-out;
 }
 
 .collage .image:nth-child(1) {

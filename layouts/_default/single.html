@@ -7,37 +7,42 @@
 <div class="wordmark">
     <a href="/">{{ partial "wordmark" . }}</a>
 </div>
-{{ if .Params.Media }}
-<figure class="collage">
-    {{ range .Params.Media }}
-    <div class="image">
-        <img src="{{ . }}" loading="lazy"/>
+<div class="double">
+    <div class="column">
+        {{ if .Params.Media }}
+        <figure class="collage">
+            {{ range .Params.Media }}
+            <div class="image">
+                <img src="{{ . }}" loading="lazy"/>
+            </div>
+            {{ end }}
+        </figure>
+        {{ end }}
     </div>
-    {{ end }}
-</figure>
-{{ end }}
-<div class="header">
-    <div class="leading">{{ .Params.Act }}</div>
-    <div class="content">
-        <div class="title">{{ .Title }}</div>
-        <time class="subtitle" datetime='{{ .Date.Format "2006-01-02T15:04:05-0700" }}"'>{{ .Date.Format "Jan 2006" }}</time>
-    </div>
-</div>
-<div class="summary">
-    <p>{{ .Params.Summary }}</p>
-</div>
-{{ if .Params.Courses }}
-<ul class="list">
-    {{ range .Params.Courses }}
-    <li>
-        <div class="leading">{{ .name }}</div>
-        <div class="content">
-            <div class="title">{{ .title }}</div>
-            <div class="subtitle">{{ .description }}</div>
+    <div class="column">
+        <div class="header">
+            <div class="content">
+                <div class="subtitle">{{ .Params.Act }}</div>
+                <div class="title">{{ .Title }}</div>
+            </div>
+            <time class="trailing" datetime='{{ .Date.Format "2006-01-02T15:04:05-0700" }}"'>{{ .Date.Format "Jan 2006" }}</time>
         </div>
-    </li>
-    {{ end }}
-</ul>
-
-{{ end }}
+        <div class="summary">
+            <p>{{ .Params.Summary }}</p>
+        </div>
+        {{ if .Params.Courses }}
+        <ul class="list">
+            {{ range .Params.Courses }}
+            <li>
+                <div class="leading">{{ .name }}</div>
+                <div class="content">
+                    <div class="title">{{ .title }}</div>
+                    <div class="subtitle">{{ .description }}</div>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</div>
 {{ end }}
